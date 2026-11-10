@@ -6,130 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desi Dhaba - Menu</title>
     <style>
-        /* Hassan Ali 26i-6049 SE_A */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #ffffff;
-            color: #000000;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 20px 10px;
-            text-align: center;
-        }
-
-        header h1 {
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            border: 1px solid #ffffff;
-            padding: 8px 18px;
-            font-size: 14px;
-            font-weight: bold;
-            margin: 0 5px;
-            display: inline-block;
-            transition: 0.2s;
-        }
-
-        nav a:hover, nav a.active {
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        /* Main Container */
-        main {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            border-bottom: 2px solid #000000;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        h3 {
-            margin-top: 25px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            background-color: #f0f0f0;
-            padding: 5px 10px;
-            border-left: 4px solid #000000;
-        }
-
-        /* Menu Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            border: 1px solid #000000;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #000000;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-
-        .btn {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 6px 14px;
-            border: 1px solid #000000;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 12px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #ffffff;
-            color: #000000;
-            text-align: center;
-            padding: 15px;
-            border-top: 2px solid #000000;
-            font-size: 14px;
-            font-weight: bold;
-            margin-top: 40px;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #ffffff; color: #000000; font-family: Arial, sans-serif; line-height: 1.6; }
+        header { background-color: #000000; color: #ffffff; padding: 20px 10px; text-align: center; }
+        header h1 { letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase; }
+        nav a { color: #ffffff; text-decoration: none; border: 1px solid #ffffff; padding: 8px 18px; font-size: 14px; font-weight: bold; margin: 0 5px; display: inline-block; }
+        nav a:hover, nav a.active { background-color: #ffffff; color: #000000; }
+        main { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .menu-image { margin-bottom: 25px; border: 2px solid #000000; }
+        .menu-image img { width: 100%; height: auto; display: block; }
+        h2 { border-bottom: 2px solid #000000; padding-bottom: 8px; margin-bottom: 20px; text-transform: uppercase; }
+        h3 { margin-top: 25px; margin-bottom: 10px; text-transform: uppercase; background-color: #f0f0f0; padding: 5px 10px; border-left: 4px solid #000000; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #000000; padding: 12px; text-align: left; }
+        th { background-color: #000000; color: #ffffff; text-transform: uppercase; }
+        .btn { background-color: #000000; color: #ffffff; padding: 6px 14px; border: 1px solid #000000; font-weight: bold; text-transform: uppercase; font-size: 12px; cursor: pointer; }
+        .btn:hover { background-color: #ffffff; color: #000000; }
+        footer { background-color: #ffffff; color: #000000; text-align: center; padding: 15px; border-top: 2px solid #000000; font-size: 14px; font-weight: bold; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <h1>Desi Dhaba</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html" class="active">Menu</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="firstpage.html">Home</a>
+            <a href="secondpage.html" class="active">Menu</a>
+            <a href="thirdpage.html">Contact Us</a>
         </nav>
     </header>
+
+    <main>
+        <div class="menu-image">
+            <img src="dhaba_food.png" alt="Desi Dhaba Menu">
+        </div>
+
+        <h2>Our Dhaba Menu</h2>
+
+        <h3>Main Courses</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chicken Karahi (Half)</td>
+                    <td>Rs. 850</td>
+                    <td><button class="btn" onclick="orderItem('Chicken Karahi (Half)')">Order</button></td>
+                </tr>
+                <tr>
+                    <td>Daal Makhni</td>
+                    <td>Rs. 250</td>
+                    <td><button class="btn" onclick="orderItem('Daal Makhni')">Order</button></td>
+                </tr>
+                <tr>
+                    <td>Chicken Biryani</td>
+                    <td>Rs. 350</td>
+                    <td><button class="btn" onclick="orderItem('Chicken Biryani')">Order</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Tandoor & Drinks</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Roti / Tandoori Naan</td>
+                    <td>Rs. 30</td>
+                    <td><button class="btn" onclick="orderItem('Roti / Tandoori Naan')">Order</button></td>
+                </tr>
+                <tr>
+                    <td>Chilled Sweet Lassi</td>
+                    <td>Rs. 150</td>
+                    <td><button class="btn" onclick="orderItem('Chilled Sweet Lassi')">Order</button></td>
+                </tr>
+                <tr>
+                    <td>Special Doodh Pati Chai</td>
+                    <td>Rs. 80</td>
+                    <td><button class="btn" onclick="orderItem('Special Doodh Pati Chai')">Order</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Hassan Ali | 26i-6049 | SE A</p>
+    </footer>
+
+    <script>
+        function orderItem(itemName) {
+            alert("Order confirmed for: " + itemName);
+        }
+    </script>
+
+</body>
+</html>
